@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL'0,
+                'wght'400,
+                'GRAD'0,
+                'opsz'48
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); </style>
+</head>
+
+<body>
+    <header>
+        <div class="flex-row center">
+            <div class="projectName">
+                <h1>PROJECT MANAGEMENT SYSTEM</h1>
+            </div>
+        </div>
+    </header>
+    <main class="flex-col center">
+        <!-- <div class="flex-row menu">
+            <div class="menu-list-div">
+                <ul class="flex-row" id="menuItems">
+                    <li><a>DASHBOARD</a></li>
+                    <li class="active"><a>PROJECTS</a></li>
+                    <li><a>ALL TASKS</a></li>
+                    <li><a>MY TASKS</a></li>
+                    <li><a>OVERVIEW</a></li>
+                    <li><a>ACTIVITIES</a></li>
+                    <li><a>MESSAGES</a></li>
+                </ul>
+            </div>
+        </div> -->
+        <div class="main-body">
+            <div class="flex-col center">
+                <button id="btnCreateTask">Create Task</button>
+                <div class="create-task-form-div" id="createTaskForm">
+                </div>
+            </div>
+            <div class="parent-container flex-row center">
+                <div class="task-container flex-col">
+                    <div class="flex-row task-type">
+                        <p><strong>UPCOMING</strong></p>
+                        <!-- <button type="button"><strong>+</strong></button> -->
+                    </div>
+                    <div class="task-div flex-col upcoming" id="upcoming">
+
+                    </div>
+                </div>
+                <div class="task-container flex-col">
+                    <div class="flex-row task-type">
+                        <p><strong>IN PROGRESS</strong></p>
+                        <!-- <button type="button"><strong>+</strong></button> -->
+                    </div>
+                    <div class="task-div flex-col in-progress" id="inProgress">
+
+                    </div>
+                </div>
+                <div class="task-container flex-col">
+                    <div class="flex-row task-type">
+                        <p><strong>COMPLETED</strong></p>
+                        <!-- <button type="button"><strong>+</strong></button> -->
+                    </div>
+                    <div class="task-div flex-col completed" id="completed">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer></footer>
+
+    <template class="create-task-template" id="createTaskTemplate">
+        <h2>CREATE A TASK</h2>
+        <form action="" class="flex-col center create-task-form">
+            <label for="taskHeading">Task Heading</label>
+            <input type="text" name="" id="taskHeading">
+            <label for="taskDescription">Task Description</label>
+            <textarea name="" id="taskDescription" cols="30" rows="5"></textarea>
+            <label for="taskType">Task Type</label>
+            <select name="" id="taskType">
+                <option value="upcoming">Upcoming</option>
+                <option value="inProgress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+            <button type="button" id="btnTaskAdd">ADD</button>
+        </form>
+    </template>
+
+    <template class="task-card-template" id="taskCardTemplate">
+        <div class="task-card">
+            <div class="task-head flex-col">
+
+            </div>
+            <div class="task-desc flex-col">
+
+            </div>
+            <div class="task-card-btn-div flex-row center">
+                <button type="button" class="task-card-button" onclick="scrap(event)">Scrap</button>
+                <button type="button" class="task-card-button" onclick="move(event)">Move</button>
+            </div>
+        </div>
+    </template>
+
+</body>
+
+</html>
